@@ -5,6 +5,6 @@ tags: [characters,귀여움,멍뭉이]
 comments: true
 ---
 
-![Alt text](/assets/images/characters-190307-1.jpg "프로필 사진") <br />
+![Alt text](/assets/images/characters-190307-2.jpg "프로필 사진") <br />
 선물 받은 캐릭터 그림!<br />
 완전 짱임!! 귀여움!!
