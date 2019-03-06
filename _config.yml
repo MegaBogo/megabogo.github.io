@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "우당탕탕 Bogo Log"
 title_separator          : "-"
-name                     : "MegaBogo"
-description              : "우당탕탕 Bogo Log"
+name                     : "Bogo"
+description              : "일상생활 속 재미를 "
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
