@@ -108,7 +108,7 @@ analytics:
 author:
 
   name             : "Bogo"
-  avatar           : path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpg"
   bio              : "일상 생활 속 재미를 찾아서"
   #location         : "Somewhere"
   email            :
