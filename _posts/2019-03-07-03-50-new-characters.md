@@ -1,6 +1,7 @@
 ---
 title: 선물 받은 캐릭터 그림!
-tags: [characters 귀여워 멍뭉이]
+date: 2019-03-07 03:50:00 -0400
+tags: [characters,귀여움,멍뭉이]
 comments: true
 ---
 

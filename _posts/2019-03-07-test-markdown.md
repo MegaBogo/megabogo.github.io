@@ -1,5 +1,6 @@
 ---
 title: Test markdown
+date: 2019-03-07 03:30:00 -0400
 subtitle: Each post also has a subtitle
 gh-badge: [star, fork, follow]
 tags: [test]
