@@ -34,8 +34,8 @@ AlarmReg Page
 처음 입력한 출발역부터 그다음역까지의 걸리는 시간을 측정하여
 그 시간이 넘는다면 우선 출발역이 변경되었다고 판단한다.
 
-{% highlight javascript linenos %}
-if(시간이 넘는다면)
+{% highlight java linenos %}
+if(timeRemaining >= expectedArrivalTime)
     출발역.변경안내서비스()
 {% endhighlight %}    
 
@@ -62,7 +62,7 @@ AlarmViewPage
 도착 예정 시간이 5분 남았을때
 다와간다는 느낌을 주면 어떨까?
 
-{% highlight javascript linenos %}
+{% highlight java linenos %}
 if(timeRemaining <=5)
     도착.안내서비스()
 {% endhighlight %}    
