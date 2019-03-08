@@ -36,7 +36,7 @@ AlarmReg Page
 
 ```javascript
 if(timeRemaining >= expectedArrivalTime)
-    출발역.변경안내서비스()
+    출발역.변경안내서비스() 
 ```
 
 하고 변경안내 서비스에는 출발역이 변경되었습니까?문구와
