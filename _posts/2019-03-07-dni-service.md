@@ -14,10 +14,10 @@ comments: true
 누구나 한번쯤은 딴짓을 하다가 허억!하면서 두리번하지 않았을까?
 
 ![Alt text](/assets/images/post-img-190308-1.jpg "프로필 사진") <br />
-그래서 구상해봤던 SubwayAllim Business Process Model의 일부.
+그래서 구상해봤던 SubwayAlarm Business Process Model의 일부.
 
 ![Alt text](/assets/images/post-img-190308-2.jpg "프로필 사진") <br />
-AllimReg Page
+AlarmReg Page
 여기에서 여러가지 고민을 하게 되었다
 1-1. 지하철 안에서 입력하는중 다음역으로 지나가버린다면?
 - 출발역 클릭한 지점에서 Go누르기 까지 걸린 시간으로
@@ -56,7 +56,7 @@ if(시간이 넘는다면)
 
 
 ![Alt text](/assets/images/post-img-190308-3.jpg "프로필 사진") <br />
-AllimgViewPage
+AlarmViewPage
 1. 설정한 시간 단위로 도착 예정 시간을 보여준다!
 
 도착 예정 시간이 5분 남았을때
@@ -74,8 +74,7 @@ if(timeRemaining <=5)
 3. 만약 위치 안내 시간 단위가 적용한다면?
 -> 현재 위치로 주변을 알 수 있는가?(조사)
 
-![Alt text](/assets/images/post-img-190308-4.jpg "프로필 사진") <br />
-AllimPush
+AlarmPush
 
 도착하면 푸쉬를 띄워주자!
 지금 역을 확인해보라는 문구로!
