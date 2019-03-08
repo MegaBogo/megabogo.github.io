@@ -34,8 +34,10 @@ AllimReg Page
 처음 입력한 출발역부터 그다음역까지의 걸리는 시간을 측정하여
 그 시간이 넘는다면 우선 출발역이 변경되었다고 판단한다.
 
+{% highlight javascript linenos %}
 if(시간이 넘는다면)
     출발역.변경안내서비스()
+{% endhighlight %}    
 
 하고 변경안내 서비스에는 출발역이 변경되었습니까?문구와
 그 다음역, 직접선택은 문구 아래에 선택자로 표현하고
@@ -59,8 +61,11 @@ AllimgViewPage
 
 도착 예정 시간이 5분 남았을때
 다와간다는 느낌을 주면 어떨까?
-- if(timeRemaining <=5)
+
+{% highlight javascript linenos %}
+if(timeRemaining <=5)
     도착.안내서비스()
+{% endhighlight %}    
 
 2. 변경/일시정지/취소
 
