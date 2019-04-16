@@ -79,7 +79,7 @@ ArrayLikst : 동기화가 제공되지 않음. 데이터 검색에 유리하며 
 LinkedList : ArrayList에 비해 데이터의 추가, 삭제에 유리하며 데이터 검색 시에는 성능을 고려
 [자료구조 LinkedList VS ArrayList에 대한 포스팅](https;//www.nextree.co.kr/p6506)
 
-```
+```Java
 ArrayList<String> pitches = new ArrayList<>();
 
 //Add
