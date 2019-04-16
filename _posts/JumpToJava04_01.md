@@ -5,7 +5,7 @@
 (비슷한 것 끼리 묶음)
 2. 패키지가 다르면 동일한 클래스명을 사용할 수 있다.
 
-### 접근제어자
+## 접근제어자
 private
 default
 protected
@@ -13,17 +13,17 @@ public
 
 private -> default -> protected -> public 순으로 보다 많은 접근 허용
 
-#### private
+### private
 변수, 메소드는 해당 클래스에서만 접근이 가능
 
-#### default
+### default
 접근제어자를 별도로 설정하지 않는다면 접근제어가 없는 변수, 메소드는 
 default접근제어가 되어 해당 패키지 내에서만 접근이 가능
 
-#### protected
+### protected
 변수, 메소드는 동일 패키지내의 클래스 또는 해당 클래스를 상속받은 외부 패키지의 클래스에서 접근이 가능
 
-#### public
+### public
 변수, 메소드는 어떤 클래스에서라도 접근이 가능
 
 ###Inner클래스
