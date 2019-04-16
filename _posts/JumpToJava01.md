@@ -100,5 +100,8 @@ pitches.contains("129");
 pitches.remove(0);
 pitches.remove("129");
 
+for(String s : pitches) {
+ System.out.println(s);
+}
 ```
 
