@@ -48,5 +48,27 @@ System.out.println(a[2]);
 문자값을 그대로 출력하려면??
 
 #### 바이트 대신 문자로 입력 스트림을 읽어보자!
+```java
+InputStream in = System.in;
+InputStreamReader reader = new InputStreamReader(in);
+char[] a = char[3];
+reader.read(a);
+```
+InputStreamReader로 byte배열 대신 char배열을 사용한다.
+바이트 대신 문자로 입력 스트림을 읽었으나
+고정된 길이로 스트림을 읽어야하는 불편함이 발생했다.
 
-`
+#### 사용자가 엔터키를 입력할 때 까지 사용자의 입력을 전부 받아들일 수 없을까?
+```
+InputStream in = System.in;
+InputStreamReader reader = new InputStreamReader(in);
+BufferedReader br = new BufferedReader(reader);
+String a = br.readLine();
+```
+
+#### 정리!
+```
+InputStream - byte
+InputStreamReader - character
+BufferedReader - String
+```
