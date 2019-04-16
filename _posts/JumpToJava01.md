@@ -144,5 +144,82 @@ String java = aList.get0);
 형변환 과정이 필요없다.
 그 이유는 이미 컴파일러가 aList에는 반드시 String자료형만 추가 되어야 함을 알기 때문.
 
-'
+## Map
+자바의 맵은 대응관계를 쉽게 표현할 수 있게 해주는 자료형이다.
+["이름"="홍길동", "생일"="1212"]
 
+자료형으로 Associative array, Hash라고 불린다.
+
+맵은 사전과 비슷하다.
+Map은 Key와 Value라는 것을 한 쌍으로 갖는 자료형이다.
+
+맵은 리스트나 배열처럼 순차적으로(sequential) 해당 요소 값을 구하지 않고
+Key를 통해 value을 얻어내기 때문에 순차적으로 모두 검색하는 것이 아니라
+값이 있는 곳만을 펼쳐보는 것이다.
+
+
+### put
+map에 key와 value을 입력하기 위한 메소드
+```
+HashMap<String, String> map = new HashMap<>();
+map.put('people", "사람"0;
+```
+
+### get
+key에 해당되는 값을 얻기 위한 메소드
+```
+HashMap<String, String> map = new HashMap<>();
+map.get("people");
+```
+
+### containsKey
+map에 해당 key가 있는지에 따라 boolean값으로 리턴
+
+```
+HashMap<String, String> map = new HashMap<>();
+map.containsKey("people");
+```
+
+### remove
+key값에 해당되는 아이템(key, value)을 삭제 후 그 value값을 리턴
+```
+map.remove("people");
+```
+
+### size
+size메소드는 Map의 갯수를 리턴
+```
+map.size();
+```
+
+### LinkedHashMap? TreeMap??
+Map의 가장 큰 특징은 순서에 의존하지 않고 key로 value를 가져오는데 있다.
+하지만 가끔은 Map에 입력된 순서대로 데이터를 가져오고 싶은 경우도 있고
+때로는 입력된 Key에 의해 소트된 데이터를 가져오고 싶을 수도 있을 것 이다.
+
+이런 경우에는 LinkedHashMap과 TreeMap을 사용하는 것이 유리하다.
+
+LinkedHashMap : 입력된 순서대로 값을 출력해주는 특징
+TreeMap : 입력된 Key의 소트순으로 데이터가 출력
+
+```Java
+LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
+
+linkedHashMap.put("a10", "zzz');
+linkedHashMap.put("a41", "zzz');
+linkedHashMap.put("a20", "zzz');
+linkedHashMap.put("a40", "zzz');
+
+for(String key : linkedHashMap.keySet()) {
+  System.out.printf("%s:%s\n", key, linkedHashMap.get(key));
+}
+
+TreeMap<String, String> treeMap = new TreeMap<>();
+treeMap.put("z11", "sdff");
+treeMap.put("z01", "sdff");
+treeMap.put("z31", "sdff");
+
+for(String key : treeMap.keySet()) {
+  System.out.printf("%s:%s\n", key, treeMap.get(key));
+}
+```
