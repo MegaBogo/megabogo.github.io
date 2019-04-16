@@ -59,3 +59,24 @@ String[] weeks = new String[];
  String[] weeks = new String[7];
  weeks[8] = "끝";
  ```
+
+## List
+리스트는 배열과 비슷한 자바의 자료형으로 배열보다 편리한 기능을 가지고 있다.
+배열의 크기는 정해져 있다
+배열의 크기를 명확하게 알 수 있는 경우도 있지만 알 수 없는 경우도 있다.
+
+List는 동적으로 자료형의 갯수가 가변할때 유용하다.
+
+### List컬렉션 클래스에 속하는 클래스는 다음과 같다.
+```Java
+ArrayList<String> arrayList = new ArrayList<>();
+LinkedList<String> linkedList = new LinkedList<>();
+Vector<String> vector = new Vector<>();
+Stack<String> stack = new Stack<>();
+```
+Vector : 동기화 기능이 제공되는 가변이 가능한 자료 구조
+ArrayLikst : 동기화가 제공되지 않음. 데이터 검색에 유리하며 추가,삭제는 성능을 고려
+LinkedList : ArrayList에 비해 데이터의 추가, 삭제에 유리하며 데이터 검색 시에는 성능을 고려
+[자료구조 LinkedList VS ArrayList에 대한 포스팅](https;//www.nextree.co.kr/p6506)
+
+
