@@ -22,7 +22,7 @@ String b = new String("Happy Java");
 보통 문자열을 표현할 때는 가급적 리터럴(literal)방식을 사용하는 것이 좋다.
 그 이유는 가독성에 이점, 컴파일 시(new생성으로 객체가 2번 생성되지 않음) 최적화에 도움을 줌
 
-```
+```Java
 StringBuffer sb = new StringBuffer();
 sb.append("hello");
 sb.append("~~~");
