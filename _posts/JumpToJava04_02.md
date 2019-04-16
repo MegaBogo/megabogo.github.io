@@ -1,4 +1,4 @@
-#자바의 날개 달기
+# 자바의 날개 달기
 ## 정적 변수와 메소드 (static)
 ```
 static키워드를 붙이면 자바는 메모리 할당을 딱 한번만 하게 되어
@@ -19,5 +19,29 @@ static으로 설정하면 같은 곳의 메모리 주소만을 바라보기 때�
 
 ```java
 public class Counter {
+  static int staticCount = 0;
+  int count = 0;
+  
+  Counter() {
+    this.staticCount++;
+    this.count++;
+  }
+  public int getCount() {
+    return count;
+  }
+  public static int getStaticCount() {
+    return staticCount;
+  }
+  public static void main(String[] args) {
+    Counter c1 = new Counter();
+    
+    System.out.println(c1.getCount());
+    System.out.println(Counter.getStaticCount());
+    
+    Counter c2 = new Counter();
+    
+    System.out.println(c2.getCount());
+    System.out.println(Counter.getStaticCount());
+  }
 }
 ```
