@@ -105,3 +105,44 @@ for(String s : pitches) {
 }
 ```
 
+## Generics (제네릭스)
+자바 J2SE 5.0 이후에 도입된 개념
+
+```Java
+ArrayList<String> aList = new ArrayList<String>();
+ArrayList aList = new ArrayList();
+```
+두개의 차이는 자료형 타입 바로 옆에 <E>이 잇느냐 없느냐의 차이.
+제네릭스를 이용하면 좀 더 명확한 타입체크가 가능하다.
+ 
+ ### 제네릭스를 사용하지 않는 경우 
+ ```Java
+ ArrayList aList - new ArrayList();
+ aList.add("hello");
+ aList.add('java");
+ 
+ String hello = (String) aList.get(0); 
+ ```
+ 
+ ### 제네릭스를 사용했을 경우
+```Java
+ArrayList<String> aList = new ArrayList<>();
+aList.add("java");
+String java = aList.get0);
+```
+
+#### 제네릭스를 사용했을때와 안했을때의 차이
+제네릭스를 사용하지 않을 경우에 ArrayList안에 추가 도는 객체는 Object자료형으로 인식한다.
+참고고로 Object자료형은 모든 객체가 상속하고 있는 가장 기본적인 자료형
+그렇기 때문에 제네릭스를 사용하지 않을 경우 값을 넣을 때는 문제가 되지 않는다.
+하지만 값을 가져오는 경우에는 항상 형변환을 해 주어야 한다.
+또한, 선언한 String외에 다른 객체도 넣을 수 있기 때문에,
+형변환 과정에서 잘못된 형변환으로 인한 오류가 발생할 소지가 있다.
+
+이러한 점이 제네릭스의 탄생 이유이기도 하다
+제네릭스로 자료형을 선언하기만 하면 그 이후로는 자료형에 대한
+형변환 과정이 필요없다.
+그 이유는 이미 컴파일러가 aList에는 반드시 String자료형만 추가 되어야 함을 알기 때문.
+
+'
+
