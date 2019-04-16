@@ -59,7 +59,7 @@ InputStreamReader로 byte배열 대신 char배열을 사용한다.
 고정된 길이로 스트림을 읽어야하는 불편함이 발생했다.
 
 #### 사용자가 엔터키를 입력할 때 까지 사용자의 입력을 전부 받아들일 수 없을까?
-```
+```java
 InputStream in = System.in;
 InputStreamReader reader = new InputStreamReader(in);
 BufferedReader br = new BufferedReader(reader);
@@ -71,4 +71,18 @@ String a = br.readLine();
 InputStream - byte
 InputStreamReader - character
 BufferedReader - String
+```
+
+### Scanner
+J2Se5.0부터 Scanner라는 클래스가 추가 되었는데 이 클래스를 이용하면 콘솔입력을 보다 쉽게 처리가 가능하다.
+
+
+```java
+Scanner sc = new Scanner(System.in);
+/*
+* next - 단어
+* nextLine - 라인
+* nextInt - 정수
+*/
+System.out.println(sc.next());
 ```
