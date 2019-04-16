@@ -24,3 +24,30 @@ while(true){
 br.close();
 
 ```
+
+### 파일쓰기
+
+#### byte단위로 데이터 처리
+```java
+FileOutputStream fout = new FileOutputStream("경로");
+fout.close();
+```
+FileOutputStream은 String을 byte배열로 바꾸어주는 getBytes()메소드를 이용해야하는 불편함이 있다
+
+#### byte배열 대신 문자열을 직접
+```java
+FileWriter fw = new FileWriter("경로");
+fw.close();
+```
+하지만 \r\n을 문자열끝에 덧붙여줘야하는 불편함 발생
+
+#### \r\n을 덧붙여줌
+```java
+PrintWriter pw = PrintWriter9'경로")
+for(int i = 1; i<11; i++) {
+  String data = i+"번째 줄입니다,";
+  pw.println(data);
+}
+pw.close();
+```
+
