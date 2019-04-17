@@ -27,7 +27,7 @@ public class TestThread extends Thread {
     System.out.println("main end.");
   }
 }
-```
+
 
 ### Thread Join
 위에 예제를 실행하면 쓰레드가 끝나기도 전에 main end가 출력된다.
