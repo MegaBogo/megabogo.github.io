@@ -4,7 +4,7 @@
 보통 한 개의 프로세스는 한 가지의 일을 하지만
 쓰레드를 이용하면 한 프로세스 내에서 두 가지 또는 그 이상의 일을 동시에 할 수 있다.
 
-````java
+```java
 public class TestThread extends Thread {
   int seq;
   public TestThread(int seq) {
@@ -27,6 +27,7 @@ public class TestThread extends Thread {
     System.out.println("main end.");
   }
 }
+```
 
 
 ### Thread Join
