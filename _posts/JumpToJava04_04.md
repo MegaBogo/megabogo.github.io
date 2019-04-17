@@ -51,6 +51,7 @@ public class TestException {
 }
 ```
 
+정리
 ```java
 try {
  //실행구간
@@ -60,3 +61,22 @@ try {
   //예외가 발생하더라도 반드시 실행되어야 하는 부분
 }
 ```
+
+FoolException처리를 sayNick메소드에서 하는것이 좋을까?
+아니면 main메소드에서 하는것이 좋을까?
+
+- sayNick메소드에서 예외를 처리하는 경우
+test.sayNick("fool"); ; FoolException이 발생 후
+그 다음 문장인 test.sayNick("geniuous");이 수행
+
+하지만 main메소드에서 처리를 한 경우
+test.sayNick("fool");에서 이미 예외가 발생하여
+catch로 바져버리기 때문에
+test.sayNick("geniuous");이 수행되지 않음.
+ 
+`트랜잭션` 하나의 작업 단위
+트랜잭션 관리를 잘해야한다.
+예외처리를 할때 부분만 알아서는 안되고 전체를 관통하여
+모두 알아야만 정확히 할 수 있다
+
+`점프투자바 예외처리 마지막 부분`
