@@ -41,7 +41,22 @@ public class TestException {
     } finally {
       test.shouldBeRun();
     }
+    try {
+      test.sayNick("fool");
+      test.sayNick("geniuous");
+    } catch (FoolException e) {
+      System.out.println("Foolexception이 발생했습니다.");
+    }
   }
-  
+}
+```
+
+```java
+try {
+ //실행구간
+} catch (ArithmeticException e) {
+ //예외가 발생하면 예외에 해당되는 catch문이 수행
+} finally {
+  //예외가 발생하더라도 반드시 실행되어야 하는 부분
 }
 ```
