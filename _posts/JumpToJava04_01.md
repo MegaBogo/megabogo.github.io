@@ -3,13 +3,13 @@
 패키지 이점
 1. 클래스 분류가 용이하다 
 (비슷한 것 끼리 묶음)
-2. 패키지가 다르면 동일한 클래스명을 사용할 수 있다.
+1. 패키지가 다르면 동일한 클래스명을 사용할 수 있다.
 
 ## 접근제어자
-private
-default
-protected
-public
+- private
+- default
+- protected
+- public
 
 private -> default -> protected -> public 순으로 보다 많은 접근 허용
 
