@@ -3,7 +3,7 @@
 단 `하나의 객체`만을 생성하게 강제하는 패턴
 즉 클래스를 통해 생성할 수 있는 객체는 Only One 한개.
 
-``java
+```java
 class Singleton {
   private static Singleton one;
   private Stringleton() {
@@ -44,4 +44,4 @@ public class SingletonPattern {
      System.out.println(singleton1 == singleton2);
   }
 }
-``
+```
