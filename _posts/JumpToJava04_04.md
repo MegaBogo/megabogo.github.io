@@ -65,7 +65,7 @@ try {
 FoolException처리를 sayNick메소드에서 하는것이 좋을까?
 아니면 main메소드에서 하는것이 좋을까?
 
-- sayNick메소드에서 예외를 처리하는 경우
+sayNick메소드에서 예외를 처리하는 경우
 test.sayNick("fool"); ; FoolException이 발생 후
 그 다음 문장인 test.sayNick("geniuous");이 수행
 
