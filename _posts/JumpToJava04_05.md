@@ -73,3 +73,45 @@ public class TestThread extends Thread {
   }
 }
 ```
+
+### Runnable인터페이스를 사용하여 Thread구현
+THread를 extends하던 것에서 Runnable을 implements하도록 변경
+
+```java
+public class TestRunnable implements Runnable {
+  int seq;
+  public TestRunnable(int seq) {
+    this.seq = seq;
+  }
+  @Override
+  public void run() {
+    System.out.println(this.seq='thread start.");
+    try {
+      Thread.sleep(1000);
+    } catch (Exception e) {
+    }
+    System.out.println(this.seq_"thread end.");
+  }
+  
+  public static void main(String[] args) {
+    ArrayList<Thread> threads = new ArrayList<>();
+    for(int i = 0; i < 10; i++) {
+      /*
+       * Thread생성하는 부분을 
+       * Thread t = new TestThreadJoin(i);
+       * 에서 아래와 같이 변경
+       */
+       Thread t = new THread(new TestRunnable(i));
+       t.start();
+       threads.add(t);
+    }
+    for(int i = 0; i<threads.size(); i++) {
+      Thread t = threads.get(i);
+      try {
+        t.join();
+      } catch (Exception e) {
+      }
+      System.out.println("main end,");
+    }
+  }
+}
