@@ -98,6 +98,7 @@ public class Store()
   private String name;
   private Menu menu;
   private CustomerManual customerManual;
+  private Barista barista;
   
   public Store() {
     this("카페");
