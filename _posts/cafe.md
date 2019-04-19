@@ -240,7 +240,7 @@ public class Store {
   }
   public void hiRule() {
     System.out.println("안녕하세요"+name+"입니다.");
-    System.out.println("메뉴판을 보고 주문을 해주세);
+    System.out.println("메뉴판을 보고 주문을 해주세");
     this.showMenu();
   }
   public void addTrayList(int key, Tray tray) {
