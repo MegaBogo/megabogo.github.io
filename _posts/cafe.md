@@ -144,7 +144,7 @@ public class Customer {
       this.moeny -= price;
       return true;
     }
-    System.out.println('다음에 올게요,,,,,");
+    System.out.println("다음에 올게요,,,,,");
     
     return false;
   }
