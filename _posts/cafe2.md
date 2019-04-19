@@ -56,17 +56,17 @@ public class CustomerManual {
 ## domain.Menu.java
 ```java
 public class Menu {
-  private Stack<MenuItem> menuList;
+  private List<MenuItem> menuList;
   
   public Menu() {
-    this.menuList = new Stack<>();
-    menuList.push(new MenuItem("아메리카노", 1500));
-    menuList.push(new MenuItem("카페라떼", 200));
-    menuList.push(new MenuItem("녹차라뗴", 2300));
-    menuList.push(new MenuItem("망고스무디", 3000));
-    menuList.push(new MenuItem("녹차프라페", 3000));
+    this.menuList = new ArrayList<>();
+    menuList.add(new MenuItem("아메리카노", 1500));
+    menuList.add(new MenuItem("카페라떼", 200));
+    menuList.add(new MenuItem("녹차라뗴", 2300));
+    menuList.add(new MenuItem("망고스무디", 3000));
+    menuList.add(new MenuItem("녹차프라페", 3000));
   }
-  public Stack<MenuItem> getMenuList() {
+  public List<MenuItem> getMenuList() {
     return this.menuList;
   }
   public void show() {
@@ -123,6 +123,50 @@ public class Store()
   }
   public void guset() {
     barista.sayHi();
+  }
+}
+```
+## domain.User.java
+```java
+public class User {
+  private String name;
+  private int money;
+  private Stack<MenuItem> order;
+  
+  public User() {
+    this("띠요요용");
+  }
+  public User (String name) {
+    this.money = 0;
+    this.order = new Stack<>();
+    this.name = name;
+  }
+  public void add() {
+    try {
+    
+      Scanner scan = new Scanner(System.in);
+      System.out.println("당신의 이름을 입력해주세요. : ");
+      this.name = scan.next();
+    
+      System.out.println("보유한 돈을 입력해주세요,"
+      this.moeny = scan.nextInt();
+    } catch (Exception e) {
+    
+    }
+  }
+  public void order(List<MenuItem> menuList) {
+    Scanner scan = new Scanner(System.in);
+    
+    String item;
+    boolean sw = true;
+    while(sw) {
+      item = scan.next();
+      if(item.equals("exit")) {
+        sw = false;
+      } else {
+      
+      }
+    }
   }
 }
 ```
