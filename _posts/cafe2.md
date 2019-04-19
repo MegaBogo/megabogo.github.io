@@ -4,17 +4,24 @@
 public class Program {
   public static void main(String[] args) {
     Store store = new Store("보고카페");
-    
-    Barista arista = new Barista();
-    barista.goToWork(store);
-    barista.sayHi();
+    store.baristaGoToWork(new Barista("알바생1"));
+    store.guset();
   }
 }
 ```
 ## domain.Barista.java
 ```java
 public class Barista {
+  private String name;
   private Store store;
+  
+  public Barista() {
+  
+  }
+  public Barista(String name) {
+    this.name = name;
+  }
+  
   public void goToWork(Store store) {
     this.store = store;
   }
@@ -108,6 +115,13 @@ public class Store()
   }
   public void showMenu() {
     menu.show();
+  }
+  public void baristaGoToWork(Barista barista) {
+    barista.goToWork(this);
+    this.barista = barista;
+  }
+  public void guset() {
+    barista.sayHi();
   }
 }
 ```
