@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HERONTIA</title>
+
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport">
+    <link rel="stylesheet" href="./../css/common.css" />
+    <link rel="stylesheet" href="./../css/content.css" />
+    <link rel="stylesheet" href="./../css/category.css" />
+    <link rel="stylesheet" type="text/css" href="./../plugin/fullpage/src/fullpage.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="./../plugin/fullpage/vendors/easings.min.js"></script>
+
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="./../plugin/fullpage/vendors/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="./../plugin/fullpage/src/fullpage.js"></script>
+    
+    <!-- bxslider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+    <div class="headers"></div>
+    <div id="fullpage_main" class="category">
+        <div class="banner">
+            <h1>
+                SHOPPING CART
+            </h1>
+        </div>
+        <div class="sub_navi">
+            <div class="title">
+                쇼핑카트
+                <span class="navi_toggle"></span>
+            </div>
+            <div class="navi_content">
+                <ul>
+                    <li>
+                        <a href="/herontia/category/list.html">
+                            생활용품
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="detail_content">
+            <div class="thumb_slider">
+                <div>
+                    <img src="./../img/category/thumb1.png" alt="">
+                </div>
+                <div>
+                    <img src="./../img/category/thumb2.png" alt="">
+                </div>
+                <div>
+                    <img src="./../img/category/thumb3.png" alt="">
+                </div>
+                <div>
+                    <img src="./../img/category/thumb4.png" alt="">
+                </div>
+            </div>
+            <div class="info">
+                <h2>유러피언 트리니티 폴딩 핸드 카트</h2>
+                <p>
+                    유퍼리언 스타일의 고급스러운 디자인과 기능성을 추구하는핸드 카트 설계로 제작되었습니다.<br>
+사용자의 키 또는 상황에 맞게 손잡이의 높낮이를 단계별로 조절할 수 있어 편리하게 사용할 수 있는 핸드 카트입니다.<br>알루미늄 프레임과 가방을 분리하여 사용할 수 있어, 가방뿐만 아니라 다양한 상자나
+물건들을 프레임에 올려 사용할 수 있습니다.
+                </p>
+            </div>
+            <div class="buy_wrap">
+                <a href="#buy">
+                    <span>구매하기</span>
+                </a>
+            </div>
+            <div class="detail_wrap">
+                <img src="./../img/category/detail_img.png" alt="">
+            </div>
+            <div class="product_info">
+                <div class="navi_wrap">
+                    <div class="on">
+                        제품 스펙 & 정보
+                    </div>
+                    <div>
+                        사용시 주의사항
+                    </div>
+                </div>
+                <div class="contents">
+                    <p class="on">
+                        제품명 : 유러피언 트리니티 폴딩 핸드 카트<br>
+모델명 : HT9T3E004<br>
+컬러 : 블랙<br>
+중량 : 4.5kg<br>
+재질 : 폴리에스터, 알루미늄, PE, EVA<br>
+구성품 : 바스켓 X 2EA, 프레임, 바퀴 X 3EA<br>
+규격 : 57X45X(h)97cm<br>
+원산지 : 중국
+                    </p>
+                    <p>
+                       01. 바퀴를 설치하기 전 바퀴 축 보호캡을 제거하셔야 하며 보호캡이<br>
+       파손되거나 없을 경우 반품이나 교환의 사유가 될 수 없습니다.<br>
+02. 바퀴를 설치할 경우 ‘딸깍’ 소리가 날 때까지 끼워주셔야 합니다.<br>
+03. 재질의 특성상 약간의 흠집이 있을 수 있으며, 이는 반품 또는<br>
+       교환의 사유가 될 수 없습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="list_btn_wrap">
+                <a href="/herontia/category/list.html">목록</a>
+            </div>
+        </div>
+        <div id="footer">
+                
+            </div>
+    </div>
+    <div class="top_move_btn" style="display: block; position:fixed;">
+        <img src="/herontia/img/main/icon_top_move.png" alt="">
+    </div>
+    <script>
+        $('.top_move_btn').click(function() {
+           $('html, body').animate({
+               scrollTop: 0
+           }, 300); 
+        });
+    </script>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".headers").load("/herontia/header_sub.html");
+        $("#footer").load("/herontia/footer.html");
+
+        $('.sub_navi .title').click(function() {
+            $(this).toggleClass('on');
+            
+            if($(this).hasClass('on')) {
+               $('.navi_content').slideDown('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_close.png)').css('width', '15px');
+            } else {
+                $('.navi_content').slideUp('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_open.png)').css('width', '20px');
+            }
+        });
+        
+        // 리스트 네비
+        $('.list_navi .title').click(function() {
+            $('.list_navi_content').slideDown('100');
+        });
+        $('.list_navi_content .exit').click(function() {
+            $('.list_navi_content').slideUp('100');
+        });
+        
+        $('.thumb_slider').bxSlider({
+            controls: false,
+        });
+        
+        $('.product_info .navi_wrap div').click(function() {
+            $('.product_info .navi_wrap div').removeClass("on");
+            $('.product_info .contents p').removeClass("on");
+           $(this).addClass("on");
+            
+            var id = $(this).index() + 1;
+            $(".product_info .contents p:nth-child(" + id + ")").addClass("on");
+        });
+    });
+</script>
+
+</html>

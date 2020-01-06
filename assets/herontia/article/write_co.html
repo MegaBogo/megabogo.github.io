@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HERONTIA</title>
+
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport">
+    <link rel="stylesheet" href="./../css/common.css" />
+    <link rel="stylesheet" href="./../css/content.css" />
+    <link rel="stylesheet" href="./../css/article.css" />
+    <link rel="stylesheet" type="text/css" href="./../plugin/fullpage/src/fullpage.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="./../plugin/fullpage/vendors/easings.min.js"></script>
+    <script src="./../plugin/naver-smarteditor2/demo/js/service/HuskyEZCreator.js"></script>
+
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="./../plugin/fullpage/vendors/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="./../plugin/fullpage/src/fullpage.js"></script>
+</head>
+
+<body>
+    <div class="headers"></div>
+    <div id="fullpage_main" class="article">
+        <div class="banner">
+            <h1>
+                COMMUNITY
+            </h1>
+        </div>
+        <div class="sub_navi">
+            <div class="title">
+                제휴&대량 문의
+                <span class="navi_toggle"></span>
+            </div>
+            <div class="navi_content">
+                <ul>
+                    <li>
+                        <a href="/herontia/article/list_as.html">
+                            A/S 문의
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/herontia/article/list_notice.html">
+                            공지사항
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="write_as_contents">
+            <div class="title">
+                제휴&대량 문의
+            </div>
+            <form action="#s">
+               <div class="name">
+                   <input type="text" placeholder="고객명">
+               </div>
+               <div class="phone">
+                   <input type="text" placeholder="연락처('-'없이 입력하세요.)">
+               </div>
+               <div class="email">
+                  <div><input type="text" placeholder="이메일" id="email_text"></div>
+                  <div>
+                    <select id="selectEmail">
+                         <option value="1" selected="selected">직접입력</option>
+                         <option value="naver.com">naver.com</option>
+                         <option value="hanmail.net">hanmail.net</option>
+                         <option value="hotmail.com">hotmail.com</option>
+                         <option value="nate.com">nate.com</option>
+                         <option value="yahoo.co.kr">yahoo.co.kr</option>
+                         <option value="empas.com">empas.com</option>
+                         <option value="dreamwiz.com">dreamwiz.com</option>
+                         <option value="freechal.com">freechal.com</option>
+                         <option value="lycos.co.kr">lycos.co.kr</option>
+                         <option value="korea.com">korea.com</option>
+                         <option value="gmail.com">gmail.com</option>
+                         <option value="hanmir.com">hanmir.com</option>
+                         <option value="paran.com">paran.com</option>
+                    </select>
+                  </div>
+               </div>
+<!--
+               <div class="email_direct" style="display:none;">
+                   <input type="text" id="direct_text" placeholder="이메일을 직접 입력해주세요.">
+               </div>
+-->
+               <div class="text">
+                   <textarea name="" id="" cols="30" rows="10"></textarea>
+               </div>
+               <div class="no_robot">
+                   <div class="left">
+                       자동등록방지
+                   </div>
+                   <div class="right">
+                       
+                   </div>
+               </div>
+               <div class="query_wrap">
+                   <input type="submit" value="문의하기">
+               </div>
+            </form>
+        </div>
+        <div id="footer"></div>
+    </div>
+    <div class="top_move_btn" style="display: block; position:fixed;">
+        <img src="/herontia/img/main/icon_top_move.png" alt="">
+    </div>
+    <script>
+        $('.top_move_btn').click(function() {
+           $('html, body').animate({
+               scrollTop: 0
+           }, 300); 
+        });
+    </script>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".headers").load("/herontia/header_sub.html");
+        $("#footer").load("/herontia/footer.html");
+
+        $('.sub_navi .title').click(function() {
+            $(this).toggleClass('on');
+            
+            if($(this).hasClass('on')) {
+               $('.navi_content').slideDown('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_close.png)').css('width', '15px');
+            } else {
+                $('.navi_content').slideUp('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_open.png)').css('width', '20px');
+            }
+        });
+        
+        $('#selectEmail').change(function(){
+   $("#selectEmail option:selected").each(function () {
+		
+		if($(this).val()== '1'){ //직접입력일 경우
+            $('#direct_text').val('');
+            $('.email_direct').fadeIn('100');
+		}else{ //직접입력이 아닐경우
+           $('.email_direct').fadeOut('100');
+		}
+   });
+});
+    });
+</script>
+
+</html>

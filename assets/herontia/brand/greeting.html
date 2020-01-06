@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HERONTIA</title>
+
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport">
+    <link rel="stylesheet" href="./../css/common.css" />
+    <link rel="stylesheet" href="./../css/content.css" />
+    <link rel="stylesheet" href="./../css/herontia.css" />
+    <link rel="stylesheet" type="text/css" href="./../plugin/fullpage/src/fullpage.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="./../plugin/fullpage/vendors/easings.min.js"></script>
+
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="./../plugin/fullpage/vendors/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="./../plugin/fullpage/src/fullpage.js"></script>
+</head>
+
+<body>
+    <div class="headers"></div>
+    <div id="fullpage_main" class="herontia">
+        <div class="banner">
+            <h1>
+                CEO'S GREETING
+            </h1>
+        </div>
+        <div class="sub_navi">
+            <div class="title">
+                CEO 인사말
+                <span class="navi_toggle"></span>
+            </div>
+            <div class="navi_content">
+                <ul>
+                    <li>
+                        <a href="/herontia/brand/brand.html">
+                            브랜드 스토리
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/herontia/brand/way.html">
+                            찾아오시는 길
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="title">
+            CEO 인사말
+        </div>
+        <div class="content">
+            <div class="intro">
+                <h2>
+                    WE WILL CHALLENGE<br>FOR YOU
+                </h2>
+                <p>
+                    생활용품이라는 포괄적인 경쟁 속에서<br>
+                    만족을 위한 도전이 쉽지만은 않았습니다.<br>
+                    그러나 우리는 고객님들의 경험을 통한 다양한 응답에<br>
+                    귀 기울이며 고객의 삶과 브랜드가 함께 성장할 수 있는<br>
+                    미래를 위해 계속 노력해왔습니다.<br><br>
+                    그리고 우리는 불확실한 독보적인 경험보다는<br>
+                    확실한 만족스러운 경험을 제공해드리기 위해<br>
+                    앞으로도 도전을 멈추지 않을 것입니다.
+                </p>
+                <p>
+                    (주) 코린토 대표이사
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+    <div class="top_move_btn" style="display: block; position:fixed;">
+        <img src="/herontia/img/main/icon_top_move.png" alt="">
+    </div>
+    <script>
+        $('.top_move_btn').click(function() {
+           $('html, body').animate({
+               scrollTop: 0
+           }, 300); 
+        });
+    </script>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".headers").load("/herontia/header_sub.html");
+        $("#footer").load("/herontia/footer.html");
+
+        $('.sub_navi .title').click(function() {
+            $(this).toggleClass('on');
+            
+            if($(this).hasClass('on')) {
+               $('.navi_content').slideDown('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_close.png)').css('width', '15px');
+            } else {
+                $('.navi_content').slideUp('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_open.png)').css('width', '20px');
+            }
+        });
+    });
+</script>
+
+</html>

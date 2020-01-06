@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+input {
+
+    -webkit-appearance: none;
+
+    -moz-appearance: none;
+
+    appearance: none;
+
+}
+
+
+
+input:: -ms-clear {
+    display: none;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+
+input[type=number]::-webkit-out-spin-button {
+
+    -webkit-appearance: none;
+
+    -moz-appearance: none;
+
+    appearance: none;
+
+}
+
+
+
+select {
+
+    -webkit-appearance: none;
+
+    -moz-appearance: none;
+
+    appearance: none;
+
+}
+
+
+
+select:: -ms-expand {
+    display: none;
+}
+
+
+
+
+
+input[type=number]:: -webkit-outer-spin-button,
+
+input[type=number]:: -webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+
+    -mox-appearance: none;
+
+    appearance: none;
+
+}
+
+
+
+input[type=number] {
+
+    -moz-appearance: textfield;
+
+}
+
+.cboth:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+psr {
+    position: relative;
+}
+
+psat {
+    top: 50%;
+    transform: translateY(-50%);
+}

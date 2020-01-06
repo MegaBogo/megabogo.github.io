@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HERONTIA</title>
+
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport">
+    <link rel="stylesheet" href="./../css/common.css" />
+    <link rel="stylesheet" href="./../css/content.css" />
+    <link rel="stylesheet" href="./../css/herontia.css" />
+    <link rel="stylesheet" type="text/css" href="./../plugin/fullpage/src/fullpage.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="./../plugin/fullpage/vendors/easings.min.js"></script>
+
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="./../plugin/fullpage/vendors/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="./../plugin/fullpage/src/fullpage.js"></script>
+</head>
+
+<body>
+    <div class="headers"></div>
+    <div id="fullpage_main" class="herontia">
+        <div class="banner">
+            <h1>
+                CEO'S GREETING
+            </h1>
+        </div>
+        <div class="sub_navi">
+            <div class="title">
+                찾아오시는 길
+                <span class="navi_toggle"></span>
+            </div>
+            <div class="navi_content">
+                <ul>
+                    <li>
+                        <a href="/herontia/brand/brand.html">
+                            브랜드 스토리
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/herontia/brand/greeting.html">
+                            CEO 인사말
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="way_content">
+            <div class="title">
+                찾아오시는 길
+            </div>
+            <p>
+                <b>(주) 코린토 본사 사무실</b><br><br>
+                경기도 김포시 양촌읍 양촌역길 76 (유현리 81)
+            </p>
+            <div class="map">
+                <a href="http://naver.me/5ZTxjoNk" target="_blank">
+                    <img src="./../img/herontia/map.png" alt="">
+                </a>
+            </div>
+            <div class="way_how">
+                <ul class="way_header">
+                    <li>
+                        <img src="./../img/herontia/btn_car_on.png" alt="" class="on">
+                        <img src="./../img/herontia/btn_car_off.png" alt="" class="off" style="display: none;">
+                    </li>
+                    <li>
+                        <img src="./../img/herontia/btn_subway_on.png" alt="" class="on" style="display: none;">
+                        <img src="./../img/herontia/btn_subway_off.png" alt="" class="off">
+                    </li>
+                    <li>
+                        <img src="./../img/herontia/btn_bus_on.png" alt="" class="on" style="display: none;">
+                        <img src="./../img/herontia/btn_bus_off.png" alt="" class="off">
+                    </li>
+                </ul>
+                <ul class="content">
+                    <li>
+                        <h2>
+                            일산대교 방면
+                        </h2>
+                        <p>
+                            일산대교 → 마산동 방면 우회전 →<br>
+                            운유지하차도 사거리 검단,마산동 방면 지하차도 진입 →<br>
+                            구래동 주민센터 방면 우회전 → 유현리 방면 좌회전 →<br>
+                            양촌역길 방면 좌회전 → 양촌역 방면 좌회전
+                        </p>
+                        <h2>
+                            올림픽대로 방면
+                        </h2>
+                        <p>
+                            올림픽대로 → 운양지하차도 진입 →<br>
+                            대벽리 방면 우회전 → 양촌역 방면 좌회전
+                        </p>
+                    </li>
+                    <li style="display: none;">
+                        <h2>
+                            양촌역(김포골드)
+                        </h2>
+                        <p>
+                            양촌역 하차 후 1번출구에서 도보 3분
+                        </p>
+                    </li>
+                    <li style="display: none;">
+                        <h2>
+                            구지 정류장 하차 시
+                        </h2>
+                        <p>
+                            구지 정류장 하차 후 양촌역 방향으로 16m 이동 →<br>
+                            오른쪽 방향으로 93m 이동(양촌역길)
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+    <div class="top_move_btn" style="display: block; position:fixed;">
+        <img src="/herontia/img/main/icon_top_move.png" alt="">
+    </div>
+    <script>
+        $('.top_move_btn').click(function() {
+           $('html, body').animate({
+               scrollTop: 0
+           }, 300); 
+        });
+    </script>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".headers").load("/herontia/header_sub.html");
+        $("#footer").load("/herontia/footer.html");
+
+        $('.sub_navi .title').click(function() {
+            $(this).toggleClass('on');
+            
+            if($(this).hasClass('on')) {
+               $('.navi_content').slideDown('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_close.png)').css('width', '15px');
+            } else {
+                $('.navi_content').slideUp('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_open.png)').css('width', '20px');
+            }
+        });
+
+        $('.way_how .way_header li:nth-child(1)').click(function() {
+            $('.way_how .way_header li .off').css('display', 'block');
+            $('.way_how .way_header li .on').css('display', 'none');
+            $(this).find('.on').css('display', 'block');
+            $(this).find('.off').css('display', 'none');
+            $('.way_how .content li').css('display', 'none');
+            $('.way_how .content li:nth-child(1)').css('display', 'block');
+        });
+
+        $('.way_how .way_header li:nth-child(2)').click(function() {
+            $('.way_how .way_header li .off').css('display', 'block');
+            $('.way_how .way_header li .on').css('display', 'none');
+            $(this).find('.on').css('display', 'block');
+            $(this).find('.off').css('display', 'none');
+            $('.way_how .content li').css('display', 'none');
+            $('.way_how .content li:nth-child(2)').css('display', 'block');
+        });
+
+        $('.way_how .way_header li:nth-child(3)').click(function() {
+            $('.way_how .way_header li .off').css('display', 'block');
+            $('.way_how .way_header li .on').css('display', 'none');
+            $(this).find('.on').css('display', 'block');
+            $(this).find('.off').css('display', 'none');
+            $('.way_how .content li').css('display', 'none');
+            $('.way_how .content li:nth-child(3)').css('display', 'block');
+        });
+    });
+</script>
+
+</html>
