@@ -1,0 +1,556 @@
+.herontia {
+    margin-top: 100px;
+}
+
+.herontia .banner {
+    height: 300px;
+    text-align: center;
+    background-image: url("./../img/herontia/herontia_banner_01.png");
+    background-size: cover;
+    line-height: 300px;
+}
+
+.herontia .banner h1 {
+    font-size: 47px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.herontia .sub_navi {
+    position: relative;
+}
+
+.herontia .sub_navi .title {
+    height: 100px;
+    font-size: 33px;
+    font-weight: 400;
+    color: #000;
+    line-height: 100px;
+    padding: 0 30px;
+    border-bottom: 2px solid #000;
+    box-sizing: border-box;
+}
+
+.herontia .sub_navi .title.on {
+    color: #8585e6;
+}
+
+.herontia .sub_navi .navi_toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    display: inline-block;
+    width: 28px;
+    height: 21px;
+    background-image: url('./../img/herontia/icon_open.png');
+    background-size: cover;
+}
+
+.herontia .sub_navi .navi_content {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: none;
+    z-index: 9999;
+    border-bottom: 1px solid #000;
+}
+
+.herontia .sub_navi .navi_content ul li {
+    width: 100%;
+    height: 100%;
+}
+
+.herontia .sub_navi .navi_content ul li a {
+    font-size: 33px;
+    font-weight: normal;
+    color: #000;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 30px;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid #888;
+}
+
+.herontia .sub_navi .navi_content ul li:last-child a {
+    border-bottom: 0;
+}
+
+.herontia .sub_navi .navi_content ul li:nth-child(1) a:after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    content: "";
+    display: inline-block;
+    background-image: url('./../img/herontia/icon_go.png');
+    width: 21px;
+    height: 28px;
+    background-size: cover;
+}
+
+.herontia .sub_navi .navi_content ul li:nth-child(2) a:after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    content: "";
+    display: inline-block;
+    background-image: url('./../img/herontia/icon_go.png');
+    width: 21px;
+    height: 28px;
+    background-size: cover;
+}
+
+.herontia .sub_navi .navi_content ul li:nth-child(3) a:after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    content: "";
+    display: inline-block;
+    background-image: url('./../img/herontia/icon_go.png');
+    width: 21px;
+    height: 28px;
+    background-size: cover;
+}
+
+.herontia > .title {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 41px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.herontia > .content {
+    background-image: url('./../img/herontia/herontia_greeting_bn.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 130px;
+}
+
+.herontia > .content h2 {
+    font-size: 43px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 43px;
+    text-align: center;
+}
+
+.herontia > .content p:nth-child(2) {
+    font-size: 25px;
+    line-height: 39px;
+    color: #fff;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 100px;
+}
+
+.herontia > .content p:nth-child(3) {
+    font-size: 23px;
+    line-height: 23px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.herontia .brand_content .intro_wrap {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.herontia .brand_content .intro_wrap .particle_01 {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+
+.herontia .brand_content .intro_wrap .particle_02 {
+    position: absolute;
+    right: 0;
+    top: 150px;
+}
+
+.herontia .brand_content .intro_wrap h1 {
+    font-size: 57px;
+    font-weight: 300;
+    color: #000;
+    line-height: 84px;
+    padding-top: 80px;
+}
+
+.herontia .brand_content .intro_wrap h1 b {
+    font-weight: 600;
+}
+
+.herontia .brand_content .intro_wrap p {
+    font-size: 25px;
+    line-height: 38px;
+    margin-top: 60px;
+    padding-bottom: 75px;
+}
+
+.herontia .brand_content .vision_wrap {
+    position: relative;
+    text-align: center;
+    background: #f8f8f8;
+    position: relative;
+}
+
+.herontia .brand_content .vision_wrap .particle_03 {
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+
+.herontia .brand_content .vision_wrap .particle_04 {
+    position: absolute;
+    right: 42px;
+    top: 85px;
+}
+
+.herontia .brand_content .vision_wrap .title {
+    padding-top: 75px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #8585e6;
+    margin-bottom: 70px;
+    font-size: 35px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.herontia .brand_content .vision_wrap .title_img {
+    margin-bottom: 60px;
+    margin-left: 85px;
+    margin-right: 85px;
+}
+
+.herontia .brand_content .vision_wrap .title_img img {
+    width: 100%;
+}
+
+.herontia .brand_content .vision_wrap p {
+    font-size: 25px;
+    font-weight: 300;
+    color: #000;
+    padding-bottom: 90px;
+}
+
+.herontia .brand_content .vision_wrap .three_wrap {
+    margin: 0 30px;
+    padding-bottom: 70px;
+}
+
+.herontia .brand_content .vision_wrap .three_wrap img {
+    width: 100%;
+}
+
+.herontia .brand_content .vision_wrap .particle_05 {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+}
+
+.herontia .brand_content .vision_wrap .particle_06 {
+    position: absolute;
+    right: 0;
+    top: 58%;
+}
+
+.herontia .brand_content .logo_wrap {
+    background-image: url('./../img/herontia/herontia_brand_bn.png');
+    text-align: center;
+    background-size: cover;
+}
+
+.herontia .brand_content .logo_wrap .title {
+    padding-top: 75px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #8585e6;
+    margin-bottom: 70px;
+    font-size: 35px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.herontia .brand_content .logo_wrap .logo_img {
+    margin-bottom: 50px;
+}
+
+.herontia .brand_content .logo_wrap .logo_img > div {
+    text-align: center;
+}
+
+.herontia .brand_content .logo_wrap .logo_img img {
+    display: inline-block;
+}
+
+.herontia .brand_content .logo_wrap .logo_img img:nth-child(1) {
+    margin-bottom: 30px;
+}
+
+.herontia .brand_content .logo_wrap > p {
+    font-size: 25px;
+    font-weight: 300;
+    color: #000;
+    padding-bottom: 90px;
+}
+.way_content .title {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    font-size: 41px;
+    font-weight: 600;
+    margin:0 30px 60px 30px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+}
+.way_content > p {
+    text-align: center;
+    font-size: 28px;
+    line-height: 28px;
+}
+.way_content > p b {
+    font-weight: 600;
+}
+.way_content .map {
+    margin-top: 60px;
+}
+.way_content .map a {
+    display: block;
+}
+.way_content .map a img {
+    width: 100%;
+}
+.way_content .way_how {
+    margin-top: 60px;
+    margin-bottom: 130px;
+}
+.way_content .way_how .way_header {
+    margin:0 85px;
+}
+.way_content .way_how .way_header:after {
+    content: "";
+    display: block;
+    clear:both;
+}
+.way_content .way_how .way_header li {
+    float:left;
+    margin-right: 18%;
+    width: 21.3%;
+}
+.way_content .way_how .way_header li img {
+    width: 100%;
+}
+.way_content .way_how .way_header li:last-child {
+    margin-right: 0;
+}
+.way_content .way_how .way_header {
+    margin-bottom: 90px;
+}
+.way_content .way_how .content li {
+    text-align: center;
+}
+.way_content .way_how .content li h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.way_content .way_how .content li p {
+    font-size: 23px;
+    font-weight: 200;
+    line-height: 35px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 425px) {
+    .herontia .banner {
+        height: 150px;
+        line-height: 150px;
+    }
+    .herontia .banner h1 {
+        font-size: 24px;
+    }
+    .herontia .sub_navi .title {
+        height: 50px;
+        font-size: 16px;
+        padding:0 15px;
+        line-height: 50px;
+        border-bottom: 1px solid #000;
+    }
+    .way_content .title {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        font-size: 20px;
+        margin:0 15px 30px 15px;
+        border-bottom: 1px solid #000;
+    }
+    .herontia .sub_navi .navi_toggle {
+        width: 20px;
+        height: 15px;
+        right: 15px;
+    }
+    .herontia .sub_navi .navi_content ul li:nth-child(1) a:after {
+        width: 15px;
+        height: 20px;
+        right: 15px;
+    }
+    .herontia .sub_navi .navi_content ul li:nth-child(2) a:after {
+        width: 15px;
+        height: 20px;
+        right: 15px;
+    }
+    .herontia .sub_navi .navi_content ul li:nth-child(3) a:after {
+        width: 15px;
+        height: 20px;
+        right: 15px;
+    }
+    .herontia .sub_navi .navi_content ul li a {
+        font-size: 16px;
+        padding:0 15px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .herontia .brand_content .intro_wrap .particle_01 {
+        width: 78px;
+        top:15px;
+    }
+    .herontia .brand_content .intro_wrap .particle_02 {
+        width: 90px;
+        top:80px;
+    }
+    .herontia .brand_content .intro_wrap h1 {
+        font-size: 28px;
+        line-height: 40px;
+        padding-top: 40px;
+    }
+    .herontia .brand_content .intro_wrap p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 30px;
+        padding-bottom: 38px;
+        letter-spacing: -1px;
+    }
+    .herontia .brand_content .vision_wrap .title {
+        padding-top: 40px;
+        margin-bottom: 35px;
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+    .herontia .brand_content .vision_wrap .title_img {
+        margin-bottom: 30px;
+    }
+    .herontia .brand_content .vision_wrap p {
+        font-size: 14px;
+        padding-bottom: 45px;
+        letter-spacing: -1px;
+    }
+    .herontia .brand_content .vision_wrap .three_wrap {
+        padding-bottom: 35px;
+    }
+    .herontia .brand_content .vision_wrap .particle_03 {
+        width: 100px;
+        top:-50px;
+    }
+    .herontia .brand_content .vision_wrap .particle_04 {
+        width: 70px;
+        top:40px;
+        right:20px;
+    }
+    .herontia .brand_content .vision_wrap .particle_05 {
+        width: 90px;
+        left:15px;
+    }
+    .herontia .brand_content .vision_wrap .particle_06 {
+        width: 100px;
+    }
+    .herontia .brand_content .logo_wrap .title {
+        font-size: 18px;
+        padding-bottom: 5px;
+        margin-bottom: 35px;
+        padding-top: 40px;
+    }
+    .herontia .brand_content .logo_wrap .logo_img div:nth-child(1) img {
+        width: 60%;
+        margin:0 auto 30px auto;
+    }
+    .herontia .brand_content .logo_wrap .logo_img div:nth-child(2) img {
+        width: 50%;
+        margin:0 auto;
+    }
+    .herontia .brand_content .logo_wrap .logo_img {
+        margin-bottom: 30px;
+    }
+    .herontia .brand_content .logo_wrap > p {
+        font-size: 14px;
+        padding-bottom: 45px;
+        letter-spacing: -1px;
+    }
+    .herontia > .title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .herontia > .content {
+        padding-top: 50px;
+        padding-bottom: 65px;
+    }
+    .herontia > .content h2 {
+        font-size: 21px;
+        line-height: 21px;
+    }
+    .herontia > .content p:nth-child(2) {
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        letter-spacing: -1px;
+    }
+    .herontia > .content p:nth-child(3) {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .way_content > p {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .way_content .map {
+        margin-top: 30px;
+    }
+    .way_content .way_how {
+        margin-top: 30px;
+        margin-bottom: 65px;
+    }
+    .way_content .way_how .way_header {
+        margin:0 40px;
+        margin-bottom: 45px;
+    }
+    .way_content .way_how .content li h2 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .way_content .way_how .content li p {
+        font-size:14px;
+        line-height: 20px;
+        margin:0 30px 30px 30px;
+    }
+    .herontia {
+        margin-top: 55px;
+    }
+    .herontia .brand_content .vision_wrap p {
+        margin:0 10px;
+    }
+    .herontia .brand_content .logo_wrap > p {
+        margin:0 10px;
+    }
+    #footer .info {
+        margin:0 10px;
+    }
+}

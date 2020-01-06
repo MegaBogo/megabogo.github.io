@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HERONTIA</title>
+
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport">
+    <link rel="stylesheet" href="./../css/common.css" />
+    <link rel="stylesheet" href="./../css/content.css" />
+    <link rel="stylesheet" href="./../css/article.css" />
+    <link rel="stylesheet" type="text/css" href="./../plugin/fullpage/src/fullpage.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="./../plugin/fullpage/vendors/easings.min.js"></script>
+
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="./../plugin/fullpage/vendors/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="./../plugin/fullpage/src/fullpage.js"></script>
+</head>
+
+<body>
+    <div class="headers"></div>
+    <div id="fullpage_main" class="article">
+        <div class="banner">
+            <h1>
+                COMMUNITY
+            </h1>
+        </div>
+        <div class="sub_navi">
+            <div class="title">
+                공지사항
+                <span class="navi_toggle"></span>
+            </div>
+            <div class="navi_content">
+                <ul>
+                    <li>
+                        <a href="/herontia/article/list_as.html">
+                            A/S문의
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/herontia/article/write_co.html">
+                            제휴&대량 문의
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="detail_notice_content">
+            <div class="title">
+                공지사항
+            </div>
+            <div class="detail_container">
+                <div class="title">
+                    헤론티아 홈페이지 신규 오픈
+                </div>
+                <div class="info">
+                    <span class="member">
+                        헤론티아
+                    </span>
+                    <span class="date">
+                        02.01.01
+                    </span>
+                </div>
+                <div class="detail_text">
+                    <p>
+                        <b>생활용품 전문 브랜드 헤론티아의<br>신규 홈페이지가 오픈되었습니다!</b>
+                        <br><br>
+                        헤론티아가 지향하는 브랜드 방향성과<br>
+                        다양한 제품들을 한눈에 볼 수 있는<br>
+                        헤론티아 신규 홈페이지 오픈!
+                        <br><br>
+                        <img src="./../img/article/notice_detail_banner.png" alt="">
+                    </p>
+                </div>
+            </div>
+            <div class="article_move">
+                <ul>
+                    <li>
+                        <a href="#s">
+                            <span class="status">
+                                이전글
+                            </span>
+                            <span class="title">
+                                [신제품]헤론티아 유러피언 스타일 핸드헤론티아 유러피언
+                            </span>
+                            <span class="date">
+                                02.01.01
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#s">
+                            <span class="status">
+                                다음글
+                            </span>
+                            <span class="title">
+                                [신제품]인테리어 끝판왕! 리빙박스
+                            </span>
+                            <span class="date">
+                                02.01.01
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="move_btn_wrap">
+                <a href="/herontia/article/list_notice.html">목록</a>
+            </div>
+        </div>
+        <div id="footer">
+                
+            </div>
+    </div>
+    <div class="top_move_btn" style="display: block; position:fixed;">
+        <img src="/herontia/img/main/icon_top_move.png" alt="">
+    </div>
+    <script>
+        $('.top_move_btn').click(function() {
+           $('html, body').animate({
+               scrollTop: 0
+           }, 300); 
+        });
+    </script>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".headers").load("/herontia/header_sub.html");
+        $("#footer").load("/herontia/footer.html");
+
+        $('.sub_navi .title').click(function() {
+            $(this).toggleClass('on');
+            
+            if($(this).hasClass('on')) {
+               $('.navi_content').slideDown('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_close.png)').css('width', '15px');
+            } else {
+                $('.navi_content').slideUp('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_open.png)').css('width', '20px');
+            }
+        });
+    });
+</script>
+<script>
+    $('.list_as_contents .list_wrap ul li:nth-child(1)').click(function() {
+        $('.pw_popup_content').fadeIn('100');
+        $('.pw_popup_bg').fadeIn('100');
+    });
+
+    $('.pw_popup_content .close_wrap span').click(function() {
+        $('.pw_popup_content').fadeOut('100');
+        $('.pw_popup_bg').fadeOut('100');
+    });
+</script>
+</html>

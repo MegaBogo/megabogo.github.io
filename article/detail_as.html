@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HERONTIA</title>
+
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport">
+    <link rel="stylesheet" href="./../css/common.css" />
+    <link rel="stylesheet" href="./../css/content.css" />
+    <link rel="stylesheet" href="./../css/article.css" />
+    <link rel="stylesheet" type="text/css" href="./../plugin/fullpage/src/fullpage.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="./../plugin/fullpage/vendors/easings.min.js"></script>
+
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="./../plugin/fullpage/vendors/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="./../plugin/fullpage/src/fullpage.js"></script>
+</head>
+
+<body>
+    <div class="headers"></div>
+    <div id="fullpage_main" class="article">
+        <div class="banner">
+            <h1>
+                COMMUNITY
+            </h1>
+        </div>
+        <div class="sub_navi">
+            <div class="title">
+                A/S 문의
+                <span class="navi_toggle"></span>
+            </div>
+            <div class="navi_content">
+                <ul>
+                    <li>
+                        <a href="/herontia/article/list_notice.html">
+                            공지사항
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/herontia/article/write_co.html">
+                            제휴&대량 문의
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="detail_as_content">
+            <div class="title">
+                A/S 문의
+            </div>
+            <div class="detail_container">
+                <div class="title">
+                    유러피언 핸드카트 바퀴 파손 A/S 문의
+                </div>
+                <div class="info">
+                    <span class="member">
+                        헤론티아
+                    </span>
+                    <span class="date">
+                        02.01.01
+                    </span>
+                </div>
+                <div class="product_info">
+                    <ul>
+                        <li>
+                            <span class="sub">제품명</span>
+                            <span class="con">
+                                유러피언 트리니티 핸드 카트
+                            </span>
+                        </li>
+                        <li>
+                            <span class="sub">구입처</span>
+                            <span class="con">
+                                11번가
+                            </span>
+                        </li>
+                        <li>
+                            <span class="sub">구입날짜</span>
+                            <span class="con">
+                                2019 11 04
+                            </span>
+                        </li>
+                        <li>
+                            <span class="sub">연락처</span>
+                            <span class="con">
+                                010 1234 1234
+                            </span>
+                        </li>
+                        <li>
+                            <span class="sub">이메일</span>
+                            <span class="con">
+                                herontia12345@naver.com
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="detail_text">
+                    <p>
+                        바퀴부분 파손되었습니다. A/S가 가능한지 문의드립니다
+                    </p>
+                </div>
+            </div>
+            <div class="comment_contents">
+                <div class="count">
+                    댓글 <span>1</span>개
+                </div>
+                <div class="comment_wrap">
+                    <div class="delete_btn">
+                        <a href="#s">삭제</a>
+                    </div>
+                    <div class="info">
+                        <span class="member">
+                            A/S 담당자
+                        </span>
+                        <span class="date">
+                            20-01-01
+                        </span>
+                    </div>
+                    <div class="text">
+                        <p>
+                            안녕하세요 고객님 문의사항 잘 확인했습니다.<br>문의하신 바퀴 부분은 A/S가 불가하며 따로 여분의 바퀴를 구매해주셔야 합니다.<br>구매의사가 있으실 경우 다시 한번 댓글로 남겨주시면 바퀴 구매 가격과 배송 관련 안내해드리겠습니다. 감사합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="write_comment">
+                    <form action="#s">
+                        <div class="text_wrap">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 달아주세요"></textarea>
+                        </div>
+                        <div class="btn_wrap">
+                            <div>
+                                <button>등록</button>
+                                <a href="/herontia/article/list_as.html">목록</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="mod_btn_wrap">
+                    <div>
+                        <a href="#s">수정</a>
+                        <a href="#s">삭제</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+    <div class="top_move_btn" style="display: block; position:fixed;">
+        <img src="/herontia/img/main/icon_top_move.png" alt="">
+    </div>
+    <script>
+        $('.top_move_btn').click(function() {
+           $('html, body').animate({
+               scrollTop: 0
+           }, 300); 
+        });
+    </script>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".headers").load("/herontia/header_sub.html");
+        $("#footer").load("/herontia/footer.html");
+
+        $('.sub_navi .title').click(function() {
+            $(this).toggleClass('on');
+            
+            if($(this).hasClass('on')) {
+               $('.navi_content').slideDown('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_close.png)').css('width', '15px');
+            } else {
+                $('.navi_content').slideUp('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_open.png)').css('width', '20px');
+            }
+        });
+    });
+</script>
+<script>
+    $('.list_as_contents .list_wrap ul li:nth-child(1)').click(function() {
+        $('.pw_popup_content').fadeIn('100');
+        $('.pw_popup_bg').fadeIn('100');
+    });
+
+    $('.pw_popup_content .close_wrap span').click(function() {
+        $('.pw_popup_content').fadeOut('100');
+        $('.pw_popup_bg').fadeOut('100');
+    });
+</script>
+
+</html>

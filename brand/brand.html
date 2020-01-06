@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HERONTIA</title>
+
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport">
+    <link rel="stylesheet" href="./../css/common.css" />
+    <link rel="stylesheet" href="./../css/content.css" />
+    <link rel="stylesheet" href="./../css/herontia.css" />
+    <link rel="stylesheet" type="text/css" href="./../plugin/fullpage/src/fullpage.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="./../plugin/fullpage/vendors/easings.min.js"></script>
+
+    <script type="text/javascript" src="./../plugin/fullpage/vendors/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="./../plugin/fullpage/src/fullpage.js"></script>
+</head>
+
+<body>
+    <div class="headers"></div>
+    <div id="fullpage_main" class="herontia">
+        <div class="banner">
+            <h1>
+                CEO'S GREETING
+            </h1>
+        </div>
+        <div class="sub_navi">
+            <div class="title">
+                브랜드 스토리
+                <span class="navi_toggle"></span>
+            </div>
+            <div class="navi_content">
+                <ul>
+                    <li>
+                        <a href="/herontia/brand/greeting.html">
+                            CEO 인사말
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/herontia/brand/way.html">
+                            찾아오시는 길
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="brand_content">
+            <div class="intro_wrap">
+                <h1>
+                    FOR YOUR LIFE,<br><b>HERONTIA</b>
+                </h1>
+                <p>"고객의 응답에 귀 기울이며 함께 성장할 수 있는<br>브랜드가 되도록 노력하겠습니다."</p>
+                <img src="./../img/herontia/particle_01.png" alt="" class="particle_01">
+                <img src="./../img/herontia/particle_02.png" alt="" class="particle_02">
+            </div>
+            <div class="vision_wrap">
+                <div class="title">
+                    VISION
+                </div>
+                <div class="title_img">
+                    <img src="./../img/herontia/vision_title.png" alt="">
+                </div>
+                <p>
+                    헤론티아만의 노하우로 설계하고 선별한 제품을 통해<br>
+                    질 높은 삶을 제공해드리는 것을 목표로 삼고 있습니다.<br><br>
+                    그 목표를 위해 우리는 고객의 다양한 경험을 통한 응답에<br>
+                    귀 기울이며 그것을 토대로 도전을 멈추지 않았으며,<br>
+                    앞으로도 보다 더 만족스러운 경험을 제공해드리기 위해<br>
+                    노력할 것입니다.
+                </p>
+                <div class="three_wrap">
+                    <img src="./../img/herontia/vision_three.png" alt="">
+                </div>
+                <img src="./../img/herontia/particle_03.png" alt="" class="particle_03">
+                <img src="./../img/herontia/particle_04.png" alt="" class="particle_04">
+                <img src="./../img/herontia/particle_05.png" alt="" class="particle_05">
+                <img src="./../img/herontia/particle_06.png" alt="" class="particle_06">
+            </div>
+            <div class="logo_wrap">
+                <div class="title">
+                    VISION
+                </div>
+                <div class="logo_img">
+                    <div>
+                        <img src="./../img/herontia/brand_logo.png" alt="">
+                    </div>
+                    <div>
+                        <img src="./../img/herontia/brand_logo_color.png" alt="">
+                    </div>
+                </div>
+                <p>
+                    복잡하지 않은 단순하면서도 고급스러운 라벨 모양의 외관으로<br>익숙함을 표현하였으며, 부드러운 곡선 형태의 폰트를 체택하여<br>
+                    친숙한 느낌의 로고로 제작하였습니다.<br><br>
+                    로고 컬러는 각기 다른 느낌의 붉은색과 파란색이 만난<br>독창적이면서도 새로운 느낌을 주는 보라색(purple)을<br>
+                    브랜드 메인 컬러로 확립하였습니다.
+                </p>
+            </div>
+        </div>
+        <div id="footer">sss</div>
+    </div>
+    <div class="top_move_btn" style="display: block; position:fixed;">
+        <img src="/herontia/img/main/icon_top_move.png" alt="">
+    </div>
+    <script>
+        $('.top_move_btn').click(function() {
+           $('html, body').animate({
+               scrollTop: 0
+           }, 300); 
+        });
+    </script>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".headers").load("/herontia/header_sub.html");
+        $("#footer").load("/herontia/footer.html");
+        
+        $('.sub_navi .title').click(function() {
+            $(this).toggleClass('on');
+            
+            if($(this).hasClass('on')) {
+               $('.navi_content').slideDown('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_close.png)').css('width', '15px');
+            } else {
+                $('.navi_content').slideUp('100');
+                $('.sub_navi .title span').css('background-image','url(./../img/herontia/icon_open.png)').css('width', '20px');
+            }
+        });
+    });
+</script>
+
+</html>
